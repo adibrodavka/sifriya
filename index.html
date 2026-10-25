@@ -70,6 +70,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 
 .foot{background:var(--beige);border-top:1px solid var(--line)}
 .foot .wrap{padding-block:24px 40px;display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between;font-size:15px;color:var(--muted)}
+.terms{max-width:62ch;line-height:1.7}.terms small{opacity:.8}
 .join{display:inline-flex;align-items:center;gap:8px;background:var(--mint);color:var(--ink);text-decoration:none;border-radius:999px;padding:9px 20px;font-weight:600}
 
 .adminbar{background:var(--lilac-soft);border-bottom:1px solid var(--line)}
@@ -184,7 +185,7 @@ function render(){
   else if(!list.length)h+='<div class="empty"><h2>לא מצאתי</h2>נסו מילה אחרת או נושא אחר.</div>';
   else h+=list.map(card).join("");
   h+='</div></main>';
-  h+='<footer class="foot"><div class="wrap"><span>© עדי ברודבקה | מרחב צמיחה. מותר להדפיס ולשתף עם קרדיט.</span>'+
+  h+='<footer class="foot"><div class="wrap"><span class="terms">© כל הזכויות שמורות לעדי ברודבקה | מרחב צמיחה.<br>החומרים חינמיים לשימוש אישי, בבית ובכיתה. מותר להדפיס ולשתף את הקישור לספרייה.<br>אסור למכור, להעלות לאתרים או לקבוצות אחרות, או להסיר את הקרדיט.<br><small>חלק מהאיורים: Microsoft Fluent Emoji, ברישיון MIT.</small></span>'+
     (S.settings.groupLink?'<a class="join" href="'+esc(S.settings.groupLink)+'" target="_blank" rel="noopener">להצטרפות לקבוצת הוואטסאפ</a>':'')+'</div></footer>';
   var focusId=document.activeElement&&document.activeElement.id,selStart=null;
   if(focusId==="q")selStart=document.activeElement.selectionStart;
